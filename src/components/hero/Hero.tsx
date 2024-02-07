@@ -1,35 +1,83 @@
 import React from 'react';
+import 'react-slideshow-image/dist/styles.css';
+import { Slide } from 'react-slideshow-image';
+import img1 from '../../assets/carousel1.webp';
+import img2 from '../../assets/carousel2.webp';
+import img3 from '../../assets/carousel4.webp';
+import Bestsellers from '../Bestsellers';
+import product1 from '../../assets/product1.webp';
+import product2 from '../../assets/product2.png';
+import product3 from '../../assets/product-3.webp';
+import product4 from '../../assets/product-4.webp';
+// import img4 from '../../assets/carousel5.webp';
+// import certified from '../../assets/certified_pic.png';
 
 const Hero = () => {
+  const slideImages = [
+    {
+      img: img1,
+      caption: 'Slide 1',
+    },
+    {
+      img: img2,
+      caption: 'Slide 2',
+    },
+    {
+      img: img3,
+      caption: 'Slide 3',
+    },
+    // {
+    //   img: img4,
+    //   caption: 'Slide 4',
+    // },
+  ];
+
   return (
     <div className='flex flex-col justify-center px-20 '>
       {/* <div> */}
-      <div className='py-1 text-pink font-roboto text-lg'>
+      <div className='py-1 text-lightpink font-roboto text-lg'>
         The safest choice for over 1 million women
       </div>
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident autem
-        aliquid repellendus asperiores soluta dignissimos quasi cum quaerat
-        doloribus delectus sint odio officiis ex hic, inventore corporis neque
-        aperiam voluptates eius dolores accusamus dolorem! Ipsam ut deleniti,
-        facilis deserunt quae a temporibus ex necessitatibus. Accusamus quidem
-        perspiciatis quae quas labore.
+        <Slide autoplay={true} infinite={true} arrows={false}>
+          {slideImages.map((slideImage, index) => (
+            <div key={index}>
+              <div
+                className='rounded-lg'
+                style={{
+                  backgroundImage: `url(${slideImage.img})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  height: '300px', // Adjust the height as needed
+                  width: 'auto',
+                }}
+              />
+            </div>
+          ))}
+        </Slide>
+      </div>
+      <div className='py-10'>
+        <div className='text-lightpink font-roboto font-semi-bold text-2xl'>
+          Bestsellers
+        </div>
+        <div className='font-light text-gray-500 text-sm'>
+          Shop our most loved products
+        </div>
+      </div>
+      <div className='flex justify-between pb-10'>
+        <Bestsellers img={product1} />
+        <Bestsellers img={product2} />
+        <Bestsellers img={product3} />
+        <Bestsellers img={product4} />
       </div>
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis
-        nihil dicta, accusamus nostrum iste et dolores quod ducimus voluptate
-        numquam nisi explicabo accusantium dolorem nesciunt dolorum similique
-        eos! Consectetur accusantium ab delectus dignissimos suscipit? Rem
-        accusamus totam quae accusantium quam ipsam voluptate reprehenderit
-        repellat velit tempore mollitia, sint ea vel deserunt debitis error nisi
-        provident ipsa facilis asperiores omnis laudantium perspiciatis
-        voluptatem? Eligendi laboriosam asperiores placeat in itaque quisquam
-        obcaecati earum non blanditiis dicta! Optio cumque quod obcaecati
-        perspiciatis, itaque inventore fuga. Maiores hic optio perferendis
-        voluptatem pariatur accusantium aspernatur officiis obcaecati? Tempora
-        veritatis deleniti distinctio esse officia libero.
+        <div className='text-lightpink text-2xl font-roboto font-semi-bold'>
+          Website Exclusive Offers
+        </div>
+        <div className='font-light text-gray-500 text-sm'>
+          Offers you won't get anywhere else
+        </div>
       </div>
-      {/* </div> */}
     </div>
   );
 };

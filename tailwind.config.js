@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         pink: '#F38D7D', // Your custom color code
+        lightpink: '#f18070',
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],

@@ -1,8 +1,29 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
+import axios from 'axios';
+import {Link} from 'react-router-dom'
+
+
+
 
 const Bestsellers = ({ img }) => {
+  const [productData, setproductData] = useState(null);
+
+  useEffect(()=>{
+    axios.get('http://localhost:8000/addproduct')
+    .then(response=>{
+       setproductData(response.data)
+      //  const productDetails=response.data;
+      console.log(productData);
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+  },[])
+
   return (
+   
     <div>
+      
       <div className=' w-65 flex flex-col border border-1 border-gray-300 rounded-lg'>
         {/* <div className='h-60 w-60 rounded-t-lg'> */}
         <img
@@ -34,10 +55,12 @@ const Bestsellers = ({ img }) => {
           Add to Cart
         </div>
       </div>
-      <div className='h-10 text-lightpink font-roboto text-md flex justify-center items-center font-roboto text-sm'>
+      <Link to='/sanitary-pad'> <div className='h-10 text-lightpink font-roboto text-md flex justify-center items-center font-roboto text-sm'>
         Quick View
       </div>
+      </Link>
     </div>
+   
   );
 };
 

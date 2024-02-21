@@ -1,0 +1,76 @@
+.footer-container{
+    display:flex;
+    justify-content: space-around;
+    padding: 3rem;
+    height:100vh;
+    margin-top: 4rem;
+    background-color: #ccebe0;
+}
+.submit-mail{
+    width:25%;
+    display:flex;
+    flex-direction: column;
+    height:75vh;
+    padding: 1rem;
+    background-color: #ccebe0;
+    margin-top: 1rem;
+}
+.submit-mail input{
+    padding:1rem;
+    /* border:1px solid black; */
+    margin-top: 1rem;
+    background-color: white;
+}
+.submit-btn{
+    width: 50%;
+    background-color: rgb(109, 108, 107);
+    color: white;
+    padding: 0.6rem;
+    margin-top: 1rem;
+}
+
+.social-media{
+    width:25%;
+    display:flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    height:75vh;
+    padding: 1rem;
+    background-color: #ccebe0;
+}
+.link-section{
+    
+    background:transparent;
+    display: flex;
+    margin-bottom: 2rem;
+}
+.link-img{
+    height:50px;
+    width: 50px;
+    cursor: pointer;
+    background-color: #ccebe0;
+    margin-left: 0.2rem;
+    color: rgb(75, 73, 70);
+
+
+}
+.general-faq{
+    width:25%;
+    display:flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    height:75vh;
+    padding: 1rem;
+    background-color: #ccebe0;
+}
+.small-text{
+    margin-bottom: 2rem;
+    background-color: #ccebe0;
+    color: rgb(75, 73, 70);
+    font-size: 18px;
+}
+
+.long-text{
+    background-color: #ccebe0;
+    color: rgb(75, 73, 70);
+}

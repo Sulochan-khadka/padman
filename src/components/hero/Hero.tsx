@@ -9,6 +9,10 @@ import product1 from '../../assets/product1.webp';
 import product2 from '../../assets/product2.png';
 import product3 from '../../assets/product-3.webp';
 import product4 from '../../assets/product-4.webp';
+import Offers from '../Offers';
+import Doctor from '../Doctor';
+import Blog from '../Blog';
+import Footer from '../footer/Footer';
 // import img4 from '../../assets/carousel5.webp';
 // import certified from '../../assets/certified_pic.png';
 
@@ -32,7 +36,7 @@ const Hero = () => {
     // },
   ];
 
-  return (
+  return (<>
     <div className='flex flex-col justify-center px-20 '>
       {/* <div> */}
       <div className='py-1 text-lightpink font-roboto text-lg'>
@@ -77,8 +81,28 @@ const Hero = () => {
         <div className='font-light text-gray-500 text-sm'>
           Offers you won't get anywhere else
         </div>
+        <div style={{width:'auto'}}>
+        <Offers />
+        </div>
+        <div className='text-lightpink text-2xl font-roboto font-semi-bold'>
+         Instant Doctor Appointment
+        </div>
+        <div className='font-light text-gray-500 text-sm'>
+        A community that will have your back!
+        </div>
+        <Doctor/>
+        <div className='text-lightpink text-2xl font-roboto font-semi-bold'>
+        InSync - Nua Blog
+        </div>
+        <div className='font-light text-gray-500 text-sm'>
+        Read expert articles, experience personal stories, and explore authentic content
+        </div>
+        <Blog />
+
       </div>
     </div>
+     
+    </>
   );
 };
 

@@ -1,0 +1,24 @@
+.doctor-container{
+    width:100%;
+    display: flex;
+    padding: 1rem;
+}
+.inside-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+}
+.doc-img{
+    width:660px;
+    height:55vh;
+    flex:2;
+    background-color:  #faada3;
+  
+}
+.doc-content{
+    flex:1;
+    background-color: #f4dad6;
+    text-align: center;
+    padding: 2rem;
+}

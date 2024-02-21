@@ -1,0 +1,26 @@
+.blog-container{
+    display:flex;
+    justify-content: left;
+    margin-top: 1.8rem;
+}
+
+.blog-item{
+    width:17%;
+   margin-left: 1rem;
+
+}
+
+.blog-img{
+    width:100%;
+    border-radius: 1rem;
+}
+
+.blog-para{
+    margin-top: 0.5rem;
+
+}
+.blog-btn{
+    margin-top: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.logo{
+    position: relative;
+    bottom: 1rem;
+    left:1rem;
+    /* margin-bottom: 1rem; */
+    height:70px;
+    width:200px;
+}
+
+.logo img{
+    object-fit: cover;
+    height:100px
+}
+.counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right:10px;
+    bottom: 5px;
+    /* border:1px solid black; */
+    border-radius: 1rem;
+    width:20px;
+    height:20px;
+    text-align: center;
+    background-color:#F38D7D;
+    color: white;
+}

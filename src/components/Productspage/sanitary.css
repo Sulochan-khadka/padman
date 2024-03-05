@@ -1,6 +1,7 @@
 .product-container{
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     width: 100%;
+    /* display: flex; */
 }
 .container-content{
   
@@ -23,12 +24,19 @@
 }
 
 .detail-section{
-    border: 1px solid black;
+    /* border: 1px solid black; */
+     box-shadow: rgb(0 0 0/8%) 0px 3px 12px;
+     background-color: white;
     width: 45%;
-    height:100vh;
+    height:80vh;
     margin-left: 2rem;
-    padding: 1.5rem;
+    padding:2rem;
+    margin-top: 0.5rem;
     
+}
+.detail-section ul li,p{
+    /* margin-top: 0.5rem; */
+    background-color: white;
 }
 .small-img{
     display:flex;
@@ -53,4 +61,58 @@
 .purchase-border{
     border: 1.5px solid #a7a3a3;
     margin-top: 20px;
+}
+
+.products-point{
+    list-style:disc;
+}
+.point-container {
+    background-color: white;
+}
+
+.subscription-container{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    /* border:1px solid black; */
+    padding: 1rem;
+    background-color: #F38D7D;
+    border-radius: 0.3rem;
+}
+.price-section{
+    background-color: #F38D7D;
+}
+.price-section p{
+    background-color: #F38D7D;
+    color: white;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
+}
+ 
+
+.subs{
+    color: white;
+    background-color: #F38D7D;
+    font-size: 24PX;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+.subs a{
+    background-color: #F38D7D;
+}
+
+.price-tag1{
+    background-color: #F38D7D;
+    /* margin-left: 0.2rem; */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration-line: none;
+}
+.price-tag2{
+    background-color: #F38D7D;
+    /* margin-left: 0.5rem; */
+    color: white;
 }

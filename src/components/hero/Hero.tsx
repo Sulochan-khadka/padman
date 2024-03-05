@@ -13,10 +13,21 @@ import Offers from '../Offers';
 import Doctor from '../Doctor';
 import Blog from '../Blog';
 import Footer from '../footer/Footer';
-// import img4 from '../../assets/carousel5.webp';
-// import certified from '../../assets/certified_pic.png';
+import { useProductContext } from '../../context/productcontext';
+
+
 
 const Hero = () => {
+
+  const {isLoading,products}=useProductContext()
+  console.log(products)
+  if(isLoading){
+    return <div>loading...</div>
+  }
+
+
+
+
   const slideImages = [
     {
       img: img1,
@@ -39,7 +50,7 @@ const Hero = () => {
   return (<>
     <div className='flex flex-col justify-center px-20 '>
       {/* <div> */}
-      <div className='py-1 text-lightpink font-roboto text-lg'>
+      <div className='py-1 text-blue-500 font-roboto text-lg'>
         The safest choice for over 1 million women
       </div>
       <div>
@@ -61,7 +72,7 @@ const Hero = () => {
         </Slide>
       </div>
       <div className='py-10'>
-        <div className='text-lightpink font-roboto font-semi-bold text-2xl'>
+        <div className='text-blue-500 font-roboto font-semi-bold text-2xl'>
           Bestsellers
         </div>
         <div className='font-light text-gray-500 text-sm'>
@@ -69,13 +80,21 @@ const Hero = () => {
         </div>
       </div>
       <div className='flex justify-between pb-10'>
-        <Bestsellers img={product1} />
-        <Bestsellers img={product2} />
+       {
+        products.map((curItem)=>{
+
+          return <Bestsellers key={curItem._id} {...curItem} />
+
+        })
+       }
+
+        {/* <Bestsellers img={product1} /> */}
+        {/* <Bestsellers img={product2} />
         <Bestsellers img={product3} />
-        <Bestsellers img={product4} />
+        <Bestsellers img={product4} /> */}
       </div>
       <div>
-        <div className='text-lightpink text-2xl font-roboto font-semi-bold'>
+        <div className='text-blue-500 text-2xl font-roboto font-semi-bold'>
           Website Exclusive Offers
         </div>
         <div className='font-light text-gray-500 text-sm'>
@@ -84,14 +103,14 @@ const Hero = () => {
         <div style={{width:'auto'}}>
         <Offers />
         </div>
-        <div className='text-lightpink text-2xl font-roboto font-semi-bold'>
+        <div className='text-blue-500 text-2xl font-roboto font-semi-bold'>
          Instant Doctor Appointment
         </div>
         <div className='font-light text-gray-500 text-sm'>
         A community that will have your back!
         </div>
         <Doctor/>
-        <div className='text-lightpink text-2xl font-roboto font-semi-bold'>
+        <div className='text-blue-500 text-2xl font-roboto font-semi-bold'>
         InSync - Nua Blog
         </div>
         <div className='font-light text-gray-500 text-sm'>
